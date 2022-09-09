@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 use Shopify\Rest\Admin2021_10\DraftOrder;
 class ShopifyController extends Controller
 {
-    public function create(Request $request,$order_data)
+    public function create(Request $request)
     {
         $shop = User::first();
         $line_items = array(
             // "variant_id" => 42011142095020, //41533218980033,
             // "quantity" => 1
-            "title"=>"Adidas Shoes",
-            "price"=>"350 usd",
+            "title"=>"Adidass Shoes",
+            "price"=>"3500 usd",
             "quantity"=>1
         );
         $customer = array(
@@ -30,8 +30,10 @@ class ShopifyController extends Controller
     
         if($response['status'] == 201 || $response['status'] == 200)
         {
-            return array("status" => "success" , "msg" => "order created successfully.");
-        }else{
+            return response()->json(['data'=>$response]);
+        }
+            
+        else{
             return array("status" => "error" , "msg" => "There is issue in creating your order. Please try again!");
         }
     }}
