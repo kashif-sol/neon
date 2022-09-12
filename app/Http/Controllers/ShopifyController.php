@@ -13,8 +13,8 @@ class ShopifyController extends Controller
         $line_items = array(
             // "variant_id" => 42011142095020, //41533218980033,
             // "quantity" => 1
-            "title"=>"Adidass Shoes",
-            "price"=>"3500 usd",
+            "title"=>"Printed Shorts",
+            "price"=>"750",
             "quantity"=>1
         );
         $customer = array(

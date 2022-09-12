@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ShopifyController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CustomController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,12 +15,18 @@ use Illuminate\Support\Facades\Route;
 */
 Route::group(['middleware' => 'verify.shopify'], function () {
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('home');
 Route::get('/test', function () {
     return view('test');
 });
+Route::get('form',function(){
+    return view('form');
+});
 Route::get('/draft-order',[ShopifyController::class,'create']);
+
+Route::get('/',[CustomController::class,'getData'])->name('home');
+
 
 });
