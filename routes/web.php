@@ -3,6 +3,8 @@
 use App\Http\Controllers\ShopifyController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomController;
+use App\Http\Controllers\ProfileController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +29,7 @@ Route::get('form',function(){
 Route::get('/draft-order',[ShopifyController::class,'create']);
 
 Route::get('/',[CustomController::class,'getData'])->name('home');
+Route::get('/profiles',[ProfileController::class,'getData']);
 
 
 });

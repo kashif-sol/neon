@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="modern fixed has-top-menu has-left-sidebar-half">
+<html class="modern fixed has-top-menu has-left-sidebar-half sidebar-left-collapsed">
 	<head>
 
 		<!-- Basic -->
