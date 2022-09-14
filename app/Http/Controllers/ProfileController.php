@@ -37,6 +37,7 @@ class ProfileController extends Controller
             'size' => $request->size,
             'cdesign' => $request->cdesign,
             'budget' => $request->budget,
+            'amount' => $request->amount,
             'image' => $request->image,
          ]);
     

@@ -23,6 +23,7 @@ class CreateProfilesTable extends Migration
             $table->string('size');
             $table->string('cdesign');
             $table->string('budget');
+            $table->string('amount');
             $table->string('image');
             $table->timestamps();
         });

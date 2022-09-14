@@ -24,6 +24,7 @@ class ProfileResource extends JsonResource
             'size' => $this->size,
             'cdesign' => $this->cdesign,
             'budget' => $this->budget,
+            'amount' => $this->amount,
             'image' => $this->image,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
