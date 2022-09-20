@@ -35,3 +35,4 @@ Route::get('/profiles',[ProfileController::class,'getData']);
 });
 
 Route::get('/delete-quote/{id}',[CustomController::class,'delete_quote']);
+Route::get('/get-quote/{id}',[CustomController::class,'quote_detail']);

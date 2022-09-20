@@ -40,13 +40,14 @@
 											<tbody>
                                                 @foreach($data as $data)
                                                 <tr>
-													<td style="color: #008dc7"><b>{{$data->name}}</b></td>
-													<td style="color: #008dc7"><b>{{$data->email}}</b></td>
+													<td ><b>{{$data->name}}</b></td>
+													<td ><b>{{$data->email}}</b></td>
 													<td>{{$data->phone}}</td>
 													<td>{{$data->sign}}</td>
 													<td>{{$data->help}}</td>
 													<td>
 														<a  data-id="{{$data->id}}" class="delete-record" ><i class="fa fa-trash"></i></a>
+														<a  data-id="{{$data->id}}" class="get-record" ><i class="fa fa-edit"></i></a>
 													</td>
                                                 </tr>
                                                 @endforeach
@@ -62,4 +63,68 @@
 					</div>
 					<!-- end: page -->
 				</section>
+
+				<div class="modal fade" id="edit-quote" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+						  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						  </button>
+						</div>
+						<div class="modal-body">
+							<form id="save-quote">
+								
+								<div class="form-group row pb-4">
+									<label class="col-lg-3 control-label text-lg-end pt-2" for="name">Name</label>
+									<div class="col-lg-6">
+										<input type="text" class="form-control" id="name" name="name">
+									</div>
+								</div>
+
+								<div class="form-group row pb-4">
+									<label class="col-lg-3 control-label text-lg-end pt-2" for="email">email</label>
+									<div class="col-lg-6">
+										<input type="email" class="form-control" id="email" name="email">
+									</div>
+								</div>
+
+								<div class="form-group row pb-4">
+									<label class="col-lg-3 control-label text-lg-end pt-2" for="phone">phone</label>
+									<div class="col-lg-6">
+										<input type="email" class="form-control" id="phone" name="phone">
+									</div>
+								</div>
+
+								<div class="form-group row pb-4">
+									<div class="radio-custom">
+										<input type="radio" id="radioExample1" name="radioExample" value="indoor">
+										<label for="radioExample1">In door</label>
+									</div>
+
+									<div class="radio-custom radio-primary">
+										<input type="radio" id="radioExample2" name="radioExample"  value="outdoor">
+										<label for="radioExample2">Out door</label>
+									</div>
+									 
+								</div>
+
+								<div class="form-group row pb-4">
+									<label class="col-lg-3 control-label text-lg-end pt-2" for="help">help</label>
+									<div class="col-lg-6">
+										<input type="email" class="form-control" id="help" name="help">
+									</div>
+								</div>
+
+
+							</form>
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						  <button type="button" class="btn btn-primary">Save changes</button>
+						</div>
+					  </div>
+					</div>
+				  </div>
 @endsection

@@ -15,4 +15,19 @@ $(function() {
             }
         });
     });
+
+    $(document).on("click", ".get-record", function() {
+        var id = $(this).data("id");
+        $.ajax({
+            url: "/get-quote/" + id,
+            cache: false,
+            success: function(html) {
+                $("#edit-quote").modal("show");
+            }
+        });
+    });
+
+
+
+
 });
