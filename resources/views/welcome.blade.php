@@ -75,7 +75,7 @@
 						</div>
 						<div class="modal-body">
 							<form id="save-quote">
-								
+								<input type="hidden" id="qId" name="id" value="" >
 								<div class="form-group row pb-4">
 									<label class="col-lg-3 control-label text-lg-end pt-2" for="name">Name</label>
 									<div class="col-lg-6">
@@ -98,14 +98,15 @@
 								</div>
 
 								<div class="form-group row pb-4">
+									<label class="col-lg-3 control-label text-lg-end pt-2" for="phone"></label>
 									<div class="radio-custom">
-										<input type="radio" id="radioExample1" name="radioExample" value="indoor">
-										<label for="radioExample1">In door</label>
+										<input type="radio" id="indoor" name="sign" value="indoor">
+										<label for="indoor">In door</label>
 									</div>
 
 									<div class="radio-custom radio-primary">
-										<input type="radio" id="radioExample2" name="radioExample"  value="outdoor">
-										<label for="radioExample2">Out door</label>
+										<input type="radio" id="outdoor" name="sign"  value="outdoor">
+										<label for="outdoor">Out door</label>
 									</div>
 									 
 								</div>
@@ -121,8 +122,8 @@
 							</form>
 						</div>
 						<div class="modal-footer">
-						  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						  <button type="button" class="btn btn-primary">Save changes</button>
+						  <button type="button" class="btn btn-secondary" data-dismiss="edit-quote">Close</button>
+						  <button type="button" class="btn btn-primary" id="saveQuote">Save changes</button>
 						</div>
 					  </div>
 					</div>
