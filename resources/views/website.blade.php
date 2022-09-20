@@ -82,7 +82,7 @@
 		<script src="{{asset('ThemeData/js/theme.js')}}"></script>
 
 		<!-- Theme Custom -->
-		<script src="{{asset('ThemeData/js/custom.js?v={{ date('H:i:s') }}')}}"></script>
+		<script src="{{asset('ThemeData/js/custom.js?v=333')}}"></script>
 
 		<!-- Theme Initialization Files -->
 		<script src="{{asset('ThemeData/js/theme.init.js')}}"></script>
