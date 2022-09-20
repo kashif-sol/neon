@@ -6,6 +6,8 @@ use App\Http\Resources\ProgramResource;
 use App\Models\Custom;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Exports\QuotesExport;
+
 class CustomController extends Controller
 {
     public function store(Request $request)
@@ -61,6 +63,10 @@ class CustomController extends Controller
         return view('welcome',compact('data'));
     }
 
+    public function export_quotes() 
+    {
+        return Excel::download(new QuotesExport, 'quotesusers.xlsx');
+    }
 
 
     public function delete_quote($id)

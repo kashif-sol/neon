@@ -13,6 +13,7 @@
 										<a href="#" class="card-action card-action-toggle" data-card-toggle></a>
 									</div>
 									<h2 class="card-title">Dashboard</h2><br>
+									<a href="/export_quotes" class="btn btn-success">Export</a>
 								</div>
 								<div class="card-body">
 									<div class="datatables-header-footer-wrapper">

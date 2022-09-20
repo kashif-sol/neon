@@ -14,6 +14,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
+        "maatwebsite/excel": "^3.1",
         "osiset/laravel-shopify": "^17.2"
     },
     "require-dev": {

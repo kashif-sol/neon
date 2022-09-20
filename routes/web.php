@@ -33,7 +33,8 @@ Route::get('/profiles',[ProfileController::class,'getData']);
 
 
 });
-
+Route::get('/export_quotes',[CustomController::class,'export_quotes']);
 Route::get('/delete-quote/{id}',[CustomController::class,'delete_quote']);
 Route::get('/get-quote/{id}',[CustomController::class,'quote_detail']);
 Route::post('/save-quote',[CustomController::class,'save']);
+
