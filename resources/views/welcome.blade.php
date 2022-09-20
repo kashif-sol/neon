@@ -45,7 +45,9 @@
 													<td>{{$data->phone}}</td>
 													<td>{{$data->sign}}</td>
 													<td>{{$data->help}}</td>
-													<td><a  data-id="{{$data->id}}" class="delete-record" ><i class="el el-trash-alt"></i></a></td>
+													<td>
+														<a  data-id="{{$data->id}}" class="delete-record" ><i class="fa fa-trash"></i></a>
+													</td>
                                                 </tr>
                                                 @endforeach
 											</tbody>
