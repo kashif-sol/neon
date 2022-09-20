@@ -36,9 +36,6 @@ $(function() {
     $(document).on("click", "#saveQuote", function() {
         $.ajax({
             url: "/save-quote",
-            cache: false,
-            processData: false,
-            contentType: false,
             type: 'POST',
             data: $('#save-quote').serialize(),
             success: function(data) {
