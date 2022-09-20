@@ -37,7 +37,7 @@ class CustomController extends Controller
         if(empty($request->id))
             $post = new Custom();
         else
-            $post = Custom::find($request->id)->first();
+            $post = Custom::find($request->id);
        
         $post->name = $request->name;
         $post->email = $request->email;
