@@ -13,7 +13,7 @@
 										<a href="#" class="card-action card-action-toggle" data-card-toggle></a>
 									</div>
 									<h2 class="card-title">Dashboard</h2><br>
-									<a href="/export_quotes" class="btn btn-success">Export</a>
+									<a href="/export_quotes" class="btn btn-success mb-4">Export</a>
 									<br>
 								</div>
 								<div class="card-body">
@@ -42,8 +42,8 @@
 											<tbody>
                                                 @foreach($data as $data)
                                                 <tr>
-													<td ><b>{{$data->name}}</b></td>
-													<td ><b>{{$data->email}}</b></td>
+													<td >{{$data->name}}</td>
+													<td >{{$data->email}}</td>
 													<td>{{$data->phone}}</td>
 													<td>{{$data->sign}}</td>
 													<td>{{$data->help}}</td>
