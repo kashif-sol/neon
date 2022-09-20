@@ -14,9 +14,6 @@ class CustomController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required',
             'phone' => 'required',
-            'sign' => 'required',
-            'help' => 'required'
-
         ]);
 
         if($validator->fails()){
@@ -35,7 +32,12 @@ class CustomController extends Controller
     }
     public function getData(){
         $data=Custom::all();
-    return view('welcome',compact('data'));
-    
+        return view('welcome',compact('data'));
+    }
+
+    public function delete_quote($id)
+    {
+        Custom::find($id)->delete();
+        return response()->json(['Record deleted successfully.']);
     }
 }

@@ -16,12 +16,6 @@ class ProfileController extends Controller
             'last_name' => 'required|string|max:255',
             'email' => 'required',
             'phone' => 'required',
-            'sign' => 'required',
-            'size' => 'required',
-            'cdesign' => 'required',
-            'budget' => 'required',
-            'image' => 'required',
-
         ]);
 
         if($validator->fails()){
@@ -43,10 +37,10 @@ class ProfileController extends Controller
     
         return response()->json(['Program created successfully.', new ProfileResource($program)]);
     }
+
     public function getData(){
         $data=Profile::all();
-    return view('profiles',compact('data'));
-    
+        return view('profiles',compact('data'));
     }
 
 }

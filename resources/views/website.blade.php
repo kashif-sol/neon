@@ -70,9 +70,6 @@
 		<script src="{{asset('ThemeData/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 		<script src="{{asset('ThemeData/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js')}}"></script>
 		<script src="{{asset('ThemeData/vendor/common/common.js')}}"></script>
-		<script src="{{asset('ThemeData/vendor/nanoscroller/nanoscroller.js')}}"></script>
-		<script src="{{asset('ThemeData/vendor/magnific-popup/jquery.magnific-popup.js')}}"></script>
-		<script src="{{asset('ThemeData/vendor/jquery-placeholder/jquery.placeholder.js')}}"></script>
 
 		<!-- Specific Page Vendor -->
 		<script src="{{asset('ThemeData/vendor/datatables/media/js/jquery.dataTables.min.js')}}"></script>

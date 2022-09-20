@@ -29,23 +29,23 @@
 
 											<thead>
 												<tr>
-													<th width="8%">ID</th>
 													<th width="28%"> Name</th>
 													<th width="18%">Email</th>
 													<th width="18%">Phone</th>
 													<th width="15%">Indoor/Outdoor</th>
 													<th width="15%">Help</th>
+													<th width="5%"></th>
 												</tr>
 											</thead>
 											<tbody>
                                                 @foreach($data as $data)
                                                 <tr>
-													<td style="color: #008dc7"><b>{{$data->id}}</b></td>
 													<td style="color: #008dc7"><b>{{$data->name}}</b></td>
 													<td style="color: #008dc7"><b>{{$data->email}}</b></td>
 													<td>{{$data->phone}}</td>
 													<td>{{$data->sign}}</td>
 													<td>{{$data->help}}</td>
+													<td><a  data-id="{{$data->id}}" class="delete-record" ><i class="el el-trash-alt"></i></a></td>
                                                 </tr>
                                                 @endforeach
 											</tbody>
