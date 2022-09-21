@@ -40,3 +40,4 @@ Route::post('/save-quote',[CustomController::class,'save']);
 Route::get('/delete-profile/{id}',[ProfileController::class,'delete_profile']);
 Route::get('/get-profile/{id}',[ProfileController::class,'profile_detail']);
 Route::post('/save-profile',[ProfileController::class,'save']);
+Route::get('/export_profiles',[ProfileController::class,'export_profiles']);

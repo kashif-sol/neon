@@ -13,6 +13,9 @@
 										<a href="#" class="card-action card-action-toggle" data-card-toggle></a>
 									</div>
 									<h2 class="card-title">Profiles</h2><br>
+									<a href="/export_profiles" class="btn btn-success mb-4">Export</a>
+									<br>
+
 								</div>
 								<div class="card-body">
 									<div class="datatables-header-footer-wrapper" style="overflow-x: scroll">
@@ -35,7 +38,7 @@
 													<th width="15%">Size</th>
 													<th width="15%">About</th>
 													<th width="15%">Currency</th>
-													<th width="15%">Image</th>
+													<th width="15%">Actions</th>
 												</tr>
 											</thead>
 											<tbody>

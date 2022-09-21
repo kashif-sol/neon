@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ProfilesExport;
 use App\Http\Resources\ProfileResource;
 use App\Models\Profile;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ProfileController extends Controller
 {
@@ -68,6 +70,10 @@ class ProfileController extends Controller
         $post->save();
     
         return response()->json(['Record saved successfully.']);
+    }
+    public function export_profiles() 
+    {
+        return Excel::download(new ProfilesExport, 'profilesusers.xlsx');
     }
     public function profile_detail($id)
     {
