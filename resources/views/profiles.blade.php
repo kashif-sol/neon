@@ -15,7 +15,7 @@
 									<h2 class="card-title">Profiles</h2><br>
 								</div>
 								<div class="card-body">
-									<div class="datatables-header-footer-wrapper">
+									<div class="datatables-header-footer-wrapper" style="overflow-x: scroll">
 										<div class="datatable-header">
 											<div class="row align-items-center mb-3">
 											</div>
@@ -50,14 +50,18 @@
 													<td>{{$data->size}}</td>
 													<td>{{$data->cdesign}}</td>
 													<td>{{$data->budget}}</td>
-													<td>{{$data->image}}</td>
+													
+													<td>
+														<a  data-id="{{$data->id}}" class="delete-profile" ><i class="fa fa-trash"></i></a>
+														<a  data-id="{{$data->id}}" class="get-profile" ><i class="fa fa-edit"></i></a>
+													</td>
                                                 </tr>
                                                 @endforeach
 											</tbody>
 										</table>
 										<hr class="solid mt-5 opacity-4">
 										
-									</table>
+									
 								</div>
 							</div>
 
@@ -65,4 +69,95 @@
 					</div>
 					<!-- end: page -->
 				</section>
+				<div class="modal fade" id="edit-quote" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+						  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						  </button>
+						</div>
+						<div class="modal-body">
+							<form id="save-profile">
+								<input type="hidden" id="id" name="id" value="" >
+								<div class="form-group row pb-4">
+									<label class="col-lg-3 control-label text-lg-end pt-2" for="name">Name</label>
+									<div class="col-lg-6">
+										<input type="text" class="form-control" id="name" name="name">
+									</div>
+								</div>
+								<div class="form-group row pb-4">
+									<label class="col-lg-3 control-label text-lg-end pt-2" for="name">Name</label>
+									<div class="col-lg-6">
+										<input type="text" class="form-control" id="last_name" name="last_name">
+									</div>
+								</div>
+
+								<div class="form-group row pb-4">
+									<label class="col-lg-3 control-label text-lg-end pt-2" for="email">email</label>
+									<div class="col-lg-6">
+										<input type="email" class="form-control" id="email" name="email">
+									</div>
+								</div>
+
+								<div class="form-group row pb-4">
+									<label class="col-lg-3 control-label text-lg-end pt-2" for="phone">phone</label>
+									<div class="col-lg-6">
+										<input type="text" class="form-control" id="phone" name="phone">
+									</div>
+								</div>
+
+								<div class="form-group row pb-4">
+									<label class="col-lg-3 control-label text-lg-end pt-2" for="sign"></label>
+									<div class="radio-custom">
+										<input type="radio" id="indoor" name="sign" value="indoor">
+										<label for="indoor">In door</label>
+									</div>
+
+									<div class="radio-custom radio-primary">
+										<input type="radio" id="outdoor" name="sign"  value="outdoor">
+										<label for="outdoor">Out door</label>
+									</div>
+									 
+								</div>
+								<div class="form-group row pb-4">
+									<label class="col-lg-3 control-label text-lg-end pt-2" for="size">Size</label>
+									<div class="col-lg-6">
+										<input type="text" class="form-control" id="size" name="size">
+									</div>
+								</div>
+								<div class="form-group row pb-4">
+									<label class="col-lg-3 control-label text-lg-end pt-2" for="size">Amount</label>
+									<div class="col-lg-6">
+										<input type="text" class="form-control" id="amount" name="amount">
+									</div>
+								</div>
+								<div class="form-group row pb-4">
+									<label class="col-lg-3 control-label text-lg-end pt-2" for="cdesign">About</label>
+									<div class="col-lg-6">
+										<input type="text" class="form-control" id="cdesign" name="cdesign">
+									</div>
+								</div>
+								<div class="form-group row pb-4">
+									<label class="col-lg-3 control-label text-lg-end pt-2" for="cdesign">Currency</label>
+									<div class="col-lg-6">
+										<input type="text" class="form-control" id="budget" name="budget">
+									</div>
+								</div>
+								
+									
+
+								
+
+
+							</form>
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-secondary" data-dismiss="edit-quote">Close</button>
+						  <button type="button" class="btn btn-primary" id="saveProfile">Save changes</button>
+						</div>
+					  </div>
+					</div>
+				  </div>
 @endsection

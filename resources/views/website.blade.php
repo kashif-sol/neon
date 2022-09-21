@@ -82,7 +82,8 @@
 		<script src="{{asset('ThemeData/js/theme.js')}}"></script>
 
 		<!-- Theme Custom -->
-		<script src="{{asset('ThemeData/js/custom.js?v=34483')}}"></script>
+		<script src="{{asset('ThemeData/js/custom.js?v=3343')}}"></script>
+		<script src="{{asset('ThemeData/js/profile.js?v=3535')}}"></script>
 
 		<!-- Theme Initialization Files -->
 		<script src="{{asset('ThemeData/js/theme.init.js')}}"></script>
