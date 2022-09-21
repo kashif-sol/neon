@@ -35,16 +35,16 @@ $(function() {
             }
         });
     });
-    $(document).on("click", "#saveProfile", function() {
-        $.ajax({
-            url: "/save-profile",
-            type: 'POST',
-            data: $('#save-profile').serialize(),
-            success: function(data) {
-                $("#edit-quote").modal("hide");
-                window.location.reload(true);
-            }
-        });
-    });
+    // $(document).on("click", "#saveProfile", function() {
+    //     $.ajax({
+    //         url: "/save-profile",
+    //         type: 'POST',
+    //         data: $('#save-profile').serialize(),
+    //         success: function(data) {
+    //             $("#edit-quote").modal("hide");
+    //             window.location.reload(true);
+    //         }
+    //     });
+    // });
 
 });

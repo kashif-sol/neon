@@ -66,10 +66,12 @@ class ProfileController extends Controller
         $post->amount = $request->amount;
         $post->cdesign = $request->cdesign;
         $post->budget = $request->budget;
+        
         $post->image = $request->image;
-        $post->save();
+       
+        $post->update();
     
-        return response()->json(['Record saved successfully.']);
+        return redirect('profiles');
     }
     public function export_profiles() 
     {

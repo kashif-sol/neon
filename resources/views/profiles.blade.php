@@ -82,8 +82,9 @@
 						  </button>
 						</div>
 						<div class="modal-body">
-							<form id="save-profile">
-								<input type="hidden" id="id" name="id" value="" >
+							<form id="save-profile" action="{{url('save-profile')}}" method="post" enctype="multipart/form-data">
+							@csrf	
+							<input type="hidden" id="id" name="id" value="" >
 								<div class="form-group row pb-4">
 									<label class="col-lg-3 control-label text-lg-end pt-2" for="name">Name</label>
 									<div class="col-lg-6">
@@ -149,18 +150,23 @@
 										<input type="text" class="form-control" id="budget" name="budget">
 									</div>
 								</div>
-								
+								<div class="form-group row pb-4">
+									<label class="col-lg-3 control-label text-lg-end pt-2" for="image">Image</label>
+									<div class="col-lg-6">
+										<input type="file" class="form-control" id="image" name="image">
+									</div>
+								</div>
 									
 
 								
 
-
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="edit-quote">Close</button>
+									<button type="submit" class="btn btn-primary" id="saveProfile">Save changes</button>
+								  </div>
 							</form>
 						</div>
-						<div class="modal-footer">
-						  <button type="button" class="btn btn-secondary" data-dismiss="edit-quote">Close</button>
-						  <button type="button" class="btn btn-primary" id="saveProfile">Save changes</button>
-						</div>
+						
 					  </div>
 					</div>
 				  </div>
