@@ -91,7 +91,7 @@
 									</div>
 								</div>
 								<div class="form-group row pb-4">
-									<label class="col-lg-3 control-label text-lg-end pt-2" for="name">Name</label>
+									<label class="col-lg-3 control-label text-lg-end pt-2" for="last_name"> Last Name</label>
 									<div class="col-lg-6">
 										<input type="text" class="form-control" id="last_name" name="last_name">
 									</div>
@@ -113,6 +113,7 @@
 
 								<div class="form-group row pb-4">
 									<label class="col-lg-3 control-label text-lg-end pt-2" for="sign"></label>
+									<div class="col-lg-6">
 									<div class="radio-custom">
 										<input type="radio" id="indoor" name="sign" value="indoor">
 										<label for="indoor">In door</label>
@@ -122,7 +123,7 @@
 										<input type="radio" id="outdoor" name="sign"  value="outdoor">
 										<label for="outdoor">Out door</label>
 									</div>
-									 
+									</div> 
 								</div>
 								<div class="form-group row pb-4">
 									<label class="col-lg-3 control-label text-lg-end pt-2" for="size">Size</label>

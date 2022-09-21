@@ -36,7 +36,7 @@
 													<th width="18%">Phone</th>
 													<th width="5%">Indoor/Outdoor</th>
 													<th width="15%">Help</th>
-													<th width="10%"></th>
+													<th width="10%">Actions</th>
 												</tr>
 											</thead>
 											<tbody>
