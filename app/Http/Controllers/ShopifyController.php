@@ -13,8 +13,8 @@ class ShopifyController extends Controller
         $line_items = array(
             // "variant_id" => 42011142095020, //41533218980033,
             // "quantity" => 1
-            "title"=>"Printed Shorts",
-            "price"=>"750",
+            "title"=>$request->title,
+            "price"=>$request->price,
             "quantity"=>1
         );
         $customer = array(
@@ -27,10 +27,13 @@ class ShopifyController extends Controller
             )
         );
         $response = $shop->api()->rest('POST', '/admin/api/2021-10/draft_orders.json',$order_data);
-    
+        
+
         if($response['status'] == 201 || $response['status'] == 200)
         {
-            return response()->json(['data'=>$response]);
+           $invoice=$response['body']->container['draft_order']['invoice_url'];
+         
+            return response()->json(['data'=>$invoice]);
         }
             
         else{

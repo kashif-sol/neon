@@ -26,7 +26,6 @@ Route::get('/test', function () {
 Route::get('form',function(){
     return view('form');
 });
-Route::get('/draft-order',[ShopifyController::class,'create']);
 
 Route::get('/',[CustomController::class,'getData'])->name('home');
 Route::get('/profiles',[ProfileController::class,'getData']);

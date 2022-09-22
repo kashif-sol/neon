@@ -4,7 +4,7 @@ use App\Http\Controllers\CustomController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ShopifyController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -21,3 +21,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::post('store',[CustomController::class,'store']);
 Route::post('profile',[ProfileController::class,'store']);
+Route::get('/draft-order',[ShopifyController::class,'create']);
