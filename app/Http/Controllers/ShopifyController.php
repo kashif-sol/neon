@@ -11,8 +11,6 @@ class ShopifyController extends Controller
     {
         $shop = User::first();
         $line_items = array(
-            // "variant_id" => 42011142095020, //41533218980033,
-            // "quantity" => 1
             "title"=>$request->title,
             "price"=>$request->price,
             "quantity"=>1
@@ -49,7 +47,7 @@ class ShopifyController extends Controller
         }
        
         $customer = array(
-            "id" => 6230616441004 //5995505549505
+            "id" => 6377480192239 //5995505549505
         );
         $order_data =  array(
             "draft_order" => array(
