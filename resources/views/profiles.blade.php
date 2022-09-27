@@ -77,7 +77,7 @@
 					  <div class="modal-content">
 						<div class="modal-header">
 						  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-						  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						  <button type="button" class="close" id="closemodal" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						  </button>
 						</div>
@@ -161,7 +161,7 @@
 								
 
 								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-dismiss="edit-quote">Close</button>
+									<button type="button" class="close btn btn-secondary" id="closebtn" data-dismiss="modal" aria-label="Close">Close</button>
 									<button type="submit" class="btn btn-primary" id="saveProfile">Save changes</button>
 								  </div>
 							</form>

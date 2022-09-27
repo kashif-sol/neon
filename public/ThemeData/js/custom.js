@@ -43,8 +43,15 @@ $(function() {
             }
         });
     });
+    $("#closemodal").click(function () {
+        // alert('hello World');
+        $('#edit-quote').modal('hide');
+    });
+    $("#closebtn").click(function () {
+        // alert('hello World');
+        $('#edit-quote').modal('hide');
+    });
 
-
-
+    
 
 });

@@ -34,7 +34,13 @@ $(function() {
                 $("#edit-quote").modal("show");
             }
         });
+        
+        $("#closemodal").click(function () {
+            // alert('hello World');
+            $('#edit-quote').modal('hide');
+        });
     });
+    
     // $(document).on("click", "#saveProfile", function() {
     //     $.ajax({
     //         url: "/save-profile",
