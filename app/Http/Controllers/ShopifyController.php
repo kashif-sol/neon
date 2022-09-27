@@ -11,19 +11,49 @@ class ShopifyController extends Controller
     {
         $shop = User::first();
         $line_items = array(
-            // "variant_id" => 42011142095020, //41533218980033,
-            // "quantity" => 1
             "title"=>$request->title,
             "price"=>$request->price,
             "quantity"=>1
         );
+
+        $note_attributes = [];
+        if(isset($request->name))
+        {
+            $note_attributes[] = array(
+                "name" => "name",
+                "value" => $request->name
+            );
+        }
+        if(isset($request->color))
+        {
+            $note_attributes[] = array(
+                "name" => "color",
+                "value" => $request->color
+            );
+        }
+        if(isset($request->description))
+        {
+            $note_attributes[] = array(
+                "name" => "description",
+                "value" => $request->description
+            );
+        }
+        if(isset($request->is_checked))
+        {
+            $note_attributes[] = array(
+                "name" => "is_checked",
+                "value" => 'yes'
+            );
+        }
+       
         $customer = array(
-            "id" => 6230616441004 //5995505549505
+            "id" => 6377480192239 //5995505549505
         );
         $order_data =  array(
             "draft_order" => array(
                 "line_items" => array($line_items),
                 "customer" => $customer,
+                "note_attributes" =>  $note_attributes,
             )
         );
         $response = $shop->api()->rest('POST', '/admin/api/2021-10/draft_orders.json',$order_data);
@@ -33,7 +63,7 @@ class ShopifyController extends Controller
         {
            $invoice=$response['body']->container['draft_order']['invoice_url'];
          
-            return response()->json(['data'=>$invoice]);
+           return response()->json(['status' => "success" , "url" => $invoice]);
         }
             
         else{
